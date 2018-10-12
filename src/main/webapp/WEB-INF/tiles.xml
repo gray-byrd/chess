@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="layout.tile" template="/WEB-INF/layouts/layout.jsp">
+        <put-attribute name="title" value="chess" />
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+    </definition>
+
+    <definition name="welcome.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/welcome.jsp" />
+    </definition>
+
+    <definition name="signup.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/signup.jsp" />
+    </definition>
+
+    <definition name="signin.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/signin.jsp" />
+    </definition>
+
+    <definition name="game.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/game.jsp" />
+    </definition>
+
+    <definition name="win.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/win.jsp" />
+    </definition>
+
+    <definition name="error.tile" extends="layout.tile" >
+        <put-attribute name="body" value="/WEB-INF/tiles/error.jsp" />
+    </definition>
+
+</tiles-definitions>
