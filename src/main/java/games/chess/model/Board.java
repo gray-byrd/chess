@@ -15,8 +15,42 @@ public class Board {
         this.board = new ArrayList<>();
         IntStream.range(0,size).forEach(i -> board.add(new ArrayList<>()));
         IntStream.range(0,size*size).forEach(i ->
-                board.get(i/size).add(PieceEnum.WHITE_PAWN));
+                board.get(i/size).add(PieceEnum.EMPTY));
+        setBoard();
         System.out.println(printBoard());
+    }
+
+    public void setBoard() {
+        IntStream.range(0,8).forEach(i -> {
+            board.get(1).set(i, PieceEnum.BLACK_PAWN);
+            board.get(6).set(i, PieceEnum.WHITE_PAWN);
+            switch (i) {
+                case 0: case 7:
+                    board.get(0).set(i, PieceEnum.BLACK_ROOK);
+                    board.get(7).set(i, PieceEnum.WHITE_ROOK);
+                    break;
+                case 1: case 6:
+                    board.get(0).set(i, PieceEnum.BLACK_KNIGHT);
+                    board.get(7).set(i, PieceEnum.WHITE_KNIGHT);
+                    break;
+                case 2: case 5:
+                    board.get(0).set(i, PieceEnum.BLACK_BISHOP);
+                    board.get(7).set(i, PieceEnum.WHITE_BISHOP);
+                    break;
+                case 3:
+                    board.get(0).set(i, PieceEnum.BLACK_QUEEN);
+                    board.get(7).set(i, PieceEnum.WHITE_QUEEN);
+                    break;
+                case 4:
+                    board.get(0).set(i, PieceEnum.BLACK_KING);
+                    board.get(7).set(i, PieceEnum.WHITE_KING);
+                    break;
+            }
+        });
+    }
+
+    public void setSquare(int i, int j, PieceEnum penum) {
+        board.get(i).set(j, penum);
     }
 
     @Override

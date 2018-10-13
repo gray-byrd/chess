@@ -1,6 +1,7 @@
 package games.chess.model;
 
 public enum PieceEnum {
+    EMPTY(" ", " "),
     WHITE_KING("\u2654", "&#9812"),
     WHITE_QUEEN("\u2655", "&#9813"),
     WHITE_ROOK("\u2656", "&#9814"),
