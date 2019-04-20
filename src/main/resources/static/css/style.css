@@ -87,9 +87,14 @@ body {
     /*border: 1px solid #51CBEE;*/
 }
 
-.board-btn:nth-child(even) {
-    background-color: #51CBEE;
+.btn-group:nth-child(even) .board-btn:nth-child(even),
+.btn-group:nth-child(odd) .board-btn:nth-child(odd) {
+    background-color: #bcccdc;
 }
+
+/*.btn-group label {*/
+    /*float: left;*/
+/*}*/
 
 /*noinspection CssUnusedSymbol,CssUnusedSymbol*/
 .col-0.row-0 {
